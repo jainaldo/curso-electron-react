@@ -12,6 +12,9 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()],
   },
   renderer: {
+    define: {
+      'process.plataform': JSON.stringify(process.platform),
+    },
     css: {
       postcss: {
         plugins: [
