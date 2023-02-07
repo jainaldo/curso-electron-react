@@ -4,7 +4,7 @@ interface StoreType {
   documents: Record<string, any>
 }
 
-const store = new Store<StoreType>({
+export const store = new Store<StoreType>({
   defaults: {
     documents: {},
   },
