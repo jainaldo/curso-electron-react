@@ -23,9 +23,12 @@ export function Header({ isSidebarOpen }: HeaderProps) {
       },
       {
         onSuccess: () => {
-          queryClient.setQueryData<Document[]>(['documents'], (documents) => {
-            return documents?.filter((document) => document.id !== id)
-          })
+          queryClient.setQueryData<Document[] | undefined>(
+            ['documents'],
+            (documents) => {
+              return documents?.filter((document) => document.id !== id)
+            },
+          )
 
           navigate('/')
         },
