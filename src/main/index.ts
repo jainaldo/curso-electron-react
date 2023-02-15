@@ -5,6 +5,7 @@ import * as path from 'node:path'
 
 import './ipc'
 import './store'
+import './tray'
 
 function createWindow(): void {
   // Create the browser window.
